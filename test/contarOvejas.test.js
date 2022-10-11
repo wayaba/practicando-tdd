@@ -33,4 +33,11 @@ describe('contarOvejas', () => {
   it('should return an array with 2 objects', () => {
     expect(contarOvejas(ovejas).length).toBe(2)
   })
+
+  it('should return an array with 3 objects', () => {
+    const ovejas2 = ovejas.filter(
+      (o) => o.color === 'rojo' && o.name === 'Navidad'
+    )
+    expect(contarOvejas(ovejas2).length).toBe(ovejas2.length)
+  })
 })
